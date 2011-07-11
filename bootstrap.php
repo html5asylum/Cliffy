@@ -8,7 +8,7 @@ function autoloader($class) {
 spl_autoload_register('autoloader');
 
 $app = Cliffy_App::getInstance();
-$app->setServer('Server_Websocket','85.92.138.84', 8180);
+$app->setServer('Server_Websocket','127.0.0.1', 8180);
 $app->setRequestHandler('Your_Handler');
 $app->installRoute(array(
     'ping' => 'generic',
