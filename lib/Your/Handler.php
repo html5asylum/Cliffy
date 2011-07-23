@@ -13,6 +13,10 @@ class Your_Handler {
 
     }
 
+    public function disconnect($socket) {
+        // Do something
+    }
+
     public static function getInstance() {
         if(!isset(self::$instance)) {
             $class = __CLASS__;
@@ -40,5 +44,8 @@ class Your_Handler {
         }
 
         return $this->response;
+    }
+    public function setUser(Cliffy_Client $user) {
+        $this->user = $user;
     }
 }
